@@ -4,6 +4,7 @@ import re
 # Get number of words in a text
 def get_num_words(booktxt: str) -> int:
     num_words = len(booktxt.split())
+    # print(f"There are {num_words} words in the document.")
     return num_words
 
 
