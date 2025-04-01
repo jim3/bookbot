@@ -30,7 +30,7 @@ def main() -> None:
 
     book_path = sys.argv[1]
     text = get_book_text(book_path)
-    numwords = get_num_words(text)
+    get_num_words(text)
     char_counts = get_num_characters(text)
     report = print_report(char_counts)
     process_report(report)
