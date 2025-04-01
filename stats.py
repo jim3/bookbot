@@ -1,13 +1,12 @@
-import re
-
-
 # Get number of words in a text
+# This function takes a string as input and returns the number of words in it.
 def get_num_words(booktxt: str) -> int:
     num_words = len(booktxt.split())
-    # print(f"There are {num_words} words in the document.")
     return num_words
 
-
+# Get number of characters in a text
+# This function counts the number of occurrences of each character in the text
+# and returns a dictionary with the character as the key and the count as the value.
 def get_num_characters(text: str) -> dict[str, int]:
     lowered_text = text.lower()
     char_count = {}
@@ -22,7 +21,9 @@ def get_num_characters(text: str) -> dict[str, int]:
 def sort_on(dict):
     return dict["num"]
 
-
+# This function takes a dictionary of character counts and returns a list of dictionaries
+# with the character name and count, sorted in descending order by count.
+# It uses the sort_on function as the `key` for sorting.
 def print_report(d: dict[str, int]):
     report = []
     char = d.copy()
